@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Wise Sans";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("/fonts/WiseSans-Heavy.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/Inter-variable.woff2") format("woff2");
+}
+
+:root { color-scheme: light; }
+html, body { height: 100%; }
+body {
+  background: #ffffff;
+  color: #0d0f0a;
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.num { font-variant-numeric: tabular-nums; }
+::selection { background: #d7f0b6; }
+
+@layer components {
+  .input {
+    @apply w-full rounded-[14px] border border-line bg-white px-4 py-3 text-[15px] outline-none transition focus:border-forest;
+  }
+}
